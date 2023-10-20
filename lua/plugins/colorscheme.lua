@@ -1,12 +1,39 @@
 return {
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = { style = "moon" },
+  },
+
   {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
+    priority = 1000,
     opts = {
       flavour = "mocha",
       transparent_background = true,
       term_colors = true,
+      styles = {
+        comments = { "italic" },
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+      },
+      dim_inactive = {
+        enabled = false,
+        shade = "dark",
+        percentage = 0.50,
+      },
       integrations = {
         alpha = true,
         cmp = true,
@@ -30,7 +57,7 @@ return {
             information = { "undercurl" },
           },
         },
-        navic = { enabled = true },
+        navic = { enabled = true, custom_bg = "lualine" },
         neotest = true,
         noice = true,
         notify = true,
@@ -42,14 +69,7 @@ return {
       },
     },
   },
-  {
-    "AlphaTechnolog/pywal.nvim",
-    lazy = false,
-    name = "pywal",
-    opt = function()
-      require("pywal").setup()
-    end,
-  },
+
   {
     "LazyVim/LazyVim",
     opts = {
