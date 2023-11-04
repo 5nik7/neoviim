@@ -41,7 +41,10 @@ return {
         illuminate = true,
         indent_blankline = { enabled = true },
         lsp_trouble = true,
-        mini = true,
+        mini = {
+          enabled = true,
+          indentscope_color = "overlay0",
+        },
         native_lsp = {
           enabled = true,
           virtual_text = {
