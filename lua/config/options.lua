@@ -1,6 +1,6 @@
 -- This file is automatically loaded by plugins.core
 vim.g.mapleader = " "
-vim.g.maplocalleader = "\\"
+vim.g.maplocalleader = " "
 
 -- Enable LazyVim auto format
 vim.g.autoformat = true
@@ -68,14 +68,14 @@ opt.fillchars = {
 }
 
 opt.guicursor = {
-    "a:block",
-    "n:Cursor",
-    "o-c:iCursor",
-    "v:vCursor",
-    "i-ci-sm:ver30-iCursor",
-    "r-cr:hor20-rCursor",
-    "a:blinkon0",
-  }
+  "a:block",
+  "n:Cursor",
+  "o-c:iCursor",
+  "v:vCursor",
+  "i-ci-sm:ver30-iCursor",
+  "r-cr:hor20-rCursor",
+  "a:blinkon0",
+}
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
