@@ -70,6 +70,11 @@ return {
         treesitter = true,
         which_key = true,
       },
+      custom_highlights = function(colors)
+        return {
+          DashboardHeader = { fg = colors.sapphire },
+        }
+      end,
     },
   },
 
