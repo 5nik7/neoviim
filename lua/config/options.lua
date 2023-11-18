@@ -14,9 +14,6 @@ vim.g.root_spec = { "lsp", { ".git", "lua" }, "cwd" }
 
 local opt = vim.opt
 
-vim.g.repos = vim.env.REPOS or vim.fn.expand("~/repos")
-vim.g.vim_dir = vim.g.repos .. "/neoviim"
-
 opt.autowrite = true -- Enable auto write
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
 opt.completeopt = "menu,menuone,noselect"

@@ -72,8 +72,8 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          DashboardHeader = { fg = colors.sky },
-          DashboardFooter = { fg = colors.overlay1 },
+          DashboardHeader = { fg = colors.sapphire },
+          DashboardFooter = { fg = "#45475a" },
         }
       end,
     },
