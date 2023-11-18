@@ -74,6 +74,7 @@ return {
         return {
           DashboardHeader = { fg = colors.sapphire },
           DashboardFooter = { fg = "#45475a" },
+          NeoTreeExpander = { fg = "#45475a" },
         }
       end,
     },
