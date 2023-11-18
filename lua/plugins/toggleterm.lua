@@ -11,11 +11,21 @@ return {
       start_in_insert = true,
       insert_mappings = true,
       persist_size = true,
-      direction = "float",
+      -- direction = 'vertical' | 'horizontal' | 'tab' | 'float',
+      direction = "horizontal",
+      auto_scroll = true,
+      highlights = {
+        Normal = {
+          guibg = "#181825",
+        },
+        FloatBorder = {
+          guifg = "#313244",
+        },
+      },
       close_on_exit = true,
-      shell = vim.o.shell,
+      shell = "/usr/bin/zsh",
       float_opts = {
-        border = "curved",
+        border = "single",
         winblend = 0,
         highlights = {
           border = "Normal",
