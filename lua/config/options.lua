@@ -53,9 +53,13 @@ opt.splitright = true -- Put new windows right of current
 opt.tabstop = 2 -- Number of spaces tabs count for
 opt.termguicolors = true -- True color support
 opt.timeoutlen = 300
+
 opt.undofile = true
+opt.undodir = vim.fn.stdpath("state") .. "/undo"
+opt.swapfile = false
 opt.undolevels = 10000
 opt.updatetime = 200 -- Save swap file and trigger CursorHold
+
 opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
@@ -104,3 +108,19 @@ vim.o.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
+
+-- disable some default providers
+-- for _, provider in ipairs { "node", "perl", "python3", "ruby" } do
+--  vim.g["loaded_" .. provider .. "_provider"] = 0
+-- end
+
+-- vim.g.node_host_prog = "~/node_modules/.bin/neovim-node-host"
+-- vim.g.ruby_host_prog = "~/.local/share/gem/ruby/3.0.0/bin/neovim-ruby-host"
+-- vim.g.python_host_prog = "~/.local/lib/python3.11/site-packages/pynvim"
+
+vim.g.loaded_perl_provider = 0
+
+-- Paths
+HOME_PATH = vim.fn.expand("$HOME")
+CONFIG_PATH = vim.fn.stdpath("config")
+LAZY_PATH = vim.fn.stdpath("data") .. "/lazy"
