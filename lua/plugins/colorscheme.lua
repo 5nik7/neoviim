@@ -72,7 +72,7 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          DashboardHeader = { fg = colors.sapphire },
+          DashboardHeader = { fg = colors.green },
           DashboardFooter = { fg = "#45475a" },
           NeoTreeExpander = { fg = "#45475a" },
         }
