@@ -72,7 +72,8 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          DashboardHeader = { fg = colors.sapphire },
+          -- DashboardHeader = { fg = colors.sapphire },
+          DashboardHeader = { fg = "#90bad3" },
           DashboardFooter = { fg = "#45475a" },
           DashboardIcon = { fg = colors.peach },
           DashboardDesc = { fg = colors.yellow },

@@ -24,6 +24,9 @@ require("lazy").setup({
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
+      paths = {
+        vim.fn.expand("~") .. "/.config/nvim",
+      },
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
