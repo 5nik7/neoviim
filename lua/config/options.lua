@@ -110,8 +110,8 @@ vim.g.markdown_recommended_style = 0
 --   vim.g["loaded_" .. provider .. "_provider"] = 0
 -- end
 
-vim.g.node_host_prog = "~/node_modules/.bin/neovim-node-host"
-vim.g.ruby_host_prog = "~/.rbenv/shims/neovim-ruby-host"
-vim.g.python_host_prog = "~/venv/lib/python3.11/site-packages/pynvim"
+-- vim.g.node_host_prog = "~/node_modules/.bin/neovim-node-host"
+-- vim.g.ruby_host_prog = "~/.rbenv/shims/neovim-ruby-host"
+-- vim.g.python_host_prog = "~/venv/lib/python3.11/site-packages/pynvim"
 
-vim.g.loaded_perl_provider = 0
+-- vim.g.loaded_perl_provider = 0

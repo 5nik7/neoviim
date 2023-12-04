@@ -72,9 +72,13 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          DashboardHeader = { fg = colors.green },
+          DashboardHeader = { fg = colors.sapphire },
           DashboardFooter = { fg = "#45475a" },
-          NeoTreeExpander = { fg = "#45475a" },
+          DashboardIcon = { fg = colors.peach },
+          DashboardDesc = { fg = colors.yellow },
+          -- DashboardKey = { fg = colors.flamingo },
+          DashboardKey = { fg = colors.pink },
+          NeoTreeDirectoryIcon = { fg = "#45475a" },
         }
       end,
     },
