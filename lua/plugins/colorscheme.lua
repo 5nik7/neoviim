@@ -1,6 +1,10 @@
 return {
 
   {
+    "AlphaTechnolog/pywal.nvim",
+  },
+
+  {
     "folke/tokyonight.nvim",
     lazy = true,
     opts = { style = "moon" },
@@ -88,7 +92,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "pywal",
     },
   },
 }
