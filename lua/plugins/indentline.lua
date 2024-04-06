@@ -4,8 +4,12 @@ return {
     event = "VeryLazy",
     opts = {
       indent = {
-        char = "│",
-        tab_char = "│",
+        -- char = "│",
+        char = "▏",
+        -- char = "▕",
+        -- tab_char = "│",
+        -- tab_char = "▏",
+        -- tab_char = "▕",
       },
       scope = { enabled = false },
       exclude = {
@@ -36,9 +40,10 @@ return {
     version = false, -- wait till new 0.7.0 release to put it back on semver
     event = "VeryLazy",
     opts = {
-      -- symbol = "▏",
-      symbol = "│",
-      options = { try_as_border = true },
+      symbol = "▏",
+      -- symbol = "▕",
+      -- symbol = "│",
+      options = { try_as_border = false },
     },
     init = function()
       vim.api.nvim_create_autocmd("FileType", {

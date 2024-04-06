@@ -55,7 +55,7 @@ opt.scrolloff = 10
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true
 opt.shiftwidth = 2
-opt.shortmess:append({ W = true, I = true, c = true, C = true })
+opt.shortmess:append { W = true, I = true, c = true, C = true }
 opt.showmode = false
 opt.signcolumn = "yes"
 opt.smartcase = true
@@ -86,6 +86,6 @@ opt.fillchars = {
   eob = " ",
 }
 
-if vim.fn.has("nvim-0.10") == 1 then
+if vim.fn.has "nvim-0.10" == 1 then
   opt.smoothscroll = true
 end
