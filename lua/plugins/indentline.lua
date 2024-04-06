@@ -4,8 +4,8 @@ return {
     event = "VeryLazy",
     opts = {
       indent = {
-        -- char = "│",
-        char = "▏",
+        char = "│",
+        -- char = "▏",
         -- char = "▕",
         -- tab_char = "│",
         -- tab_char = "▏",
@@ -40,10 +40,14 @@ return {
     version = false, -- wait till new 0.7.0 release to put it back on semver
     event = "VeryLazy",
     opts = {
-      symbol = "▏",
+      -- symbol = "▏",
       -- symbol = "▕",
-      -- symbol = "│",
-      options = { try_as_border = false },
+      symbol = "│",
+      options = {
+        border = "both",
+        indent_at_cursor = true,
+        try_as_border = false,
+      },
     },
     init = function()
       vim.api.nvim_create_autocmd("FileType", {
@@ -59,7 +63,7 @@ return {
           "notify",
           "toggleterm",
           "lazyterm",
-          "starter",
+          "mini.starter",
         },
         callback = function()
           vim.b.miniindentscope_disable = true

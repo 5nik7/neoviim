@@ -1,5 +1,4 @@
 return {
-
   {
     "catppuccin/nvim",
     lazy = false,
@@ -40,7 +39,7 @@ return {
           lsp_trouble = true,
           mini = {
             enabled = true,
-            indentscope_color = "#303C63",
+            -- indentscope_color = "#303C63",
           },
           native_lsp = {
             enabled = true,
@@ -68,7 +67,7 @@ return {
           which_key = true,
         },
         color_overrides = {
-          all = {
+          mocha = {
             rosewater = "#fffdfd",
             flamingo = "#839ec4",
             pink = "#f5a4eb",
@@ -85,7 +84,6 @@ return {
             lavender = "#7483ff",
 
             text = "#D1EAFF",
-            subtext2 = "#d5deff",
             subtext1 = "#beceff",
             subtext0 = "#b6c3f0",
             overlay2 = "#96a5db",
@@ -102,35 +100,15 @@ return {
         },
         -- custom_highlights = function()
         --   return {
-        --     comment = { fg = "#303C63" },
-        --     LineNr = { fg = "#303C63" },
-        --     MiniStarterHeader = { fg = "#6188FF" },
-        --     MiniStarterFooter = { fg = "#8A8AFF" },
-        --     MiniStarterSection = { fg = "#395691" },
-        --     MiniStarterItemBullet = { fg = "#303C63" },
-        --     MiniIndentscopeSymbol = { fg = "#6188FF" },
-        --     -- MiniIndentscopeBorder = { fg = "#303C63" },
-        --     -- DashboardHeader = { fg = colors.sapphire },
-        --     -- DashboardHeader = { fg = "#90bad3" },
-        --     -- DashboardFooter = { fg = "#45475a" },
-        --     -- DashboardIcon = { fg = colors.peach },
-        --     -- DashboardDesc = { fg = colors.yellow },
-        --     -- DashboardKey = { fg = colors.flamingo },
-        --     -- DashboardKey = { fg = colors.pink },
-        --     NeoTreeDirectoryIcon = { fg = "#303C63" },
-        --     NeoTreeMessage = { fg = "#303C63" },
-        --     NeoTreeExpander = { fg = "#303C63" },
-        --     NeoTreeWinSeparator = { fg = "#45475a" },
-        --     IblIndent = { fg = "#303C63" },
-        --     IblWhitespace = { fg = "#303C63" },
+        --     colorhere = { fg = "#" }
         --   }
         -- end,
         highlight_overrides = {
           all = function(colors)
             return {
               CmpItemMenu = { fg = colors.surface2 },
-              CursorLineNr = { fg = colors.text },
-              FloatBorder = { bg = colors.base, fg = colors.subtext1 }, -- colors.surface0 }, difficult to see
+              CursorLineNr = { fg = colors.subtext0 },
+              FloatBorder = { bg = colors.base, fg = colors.overlay0 }, -- colors.surface0 }, difficult to see
               GitSignsChange = { fg = colors.peach },
               LineNr = { fg = colors.overlay0 },
               LspInfoBorder = { link = "FloatBorder" },
@@ -158,7 +136,7 @@ return {
               -- telescope 99acec
               TelescopePromptTitle = { fg = colors.mantle, bg = "#7992ff", style = { "bold" } },
               TelescopePromptCounter = { fg = colors.red, style = { "bold" } },
-              TelescopePromptBorder = { bg = colors.base },
+              TelescopePromptBorder = { fg = colors.overlay0, bg = colors.base },
               -- telescope results
               TelescopeResultsTitle = { link = "TelescopePromptTitle" },
               TelescopeResultsBorder = { link = "TelescopePromptBorder" },
@@ -168,7 +146,7 @@ return {
               VertSplit = { bg = colors.base, fg = colors.surface0 },
               WhichKeyFloat = { bg = colors.mantle },
               YankHighlight = { bg = colors.surface2 },
-              FidgetTask = { fg = colors.subtext2 },
+              FidgetTask = { fg = colors.subtext1 },
               FidgetTitle = { fg = colors.peach },
 
               IblIndent = { fg = colors.surface0 },
@@ -200,8 +178,8 @@ return {
               SpecialChar = { fg = colors.yellow },
               Type = { fg = colors.yellow, style = { "bold" } },
               Function = { fg = colors.green, style = { "bold" } },
-              Delimiter = { fg = colors.subtext2 },
-              Ignore = { fg = colors.subtext2 },
+              Delimiter = { fg = colors.subtext1 },
+              Ignore = { fg = colors.subtext1 },
               Macro = { fg = colors.teal },
 
               TSAnnotation = { fg = colors.mauve },
@@ -251,7 +229,7 @@ return {
               TSRepeat = { fg = colors.red },
               TSStorageClass = { fg = colors.peach },
               TSStorageClassLifetime = { fg = colors.peach },
-              TSStrike = { fg = colors.subtext2 },
+              TSStrike = { fg = colors.subtext1 },
               TSString = { fg = colors.teal },
               TSStringEscape = { fg = colors.green },
               TSStringRegex = { fg = colors.green },
@@ -388,189 +366,6 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
-    },
-  },
-  {
-    "EdenEast/nightfox.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require("nightfox").setup {
-        options = {
-          transparent = true,
-          terminal_colors = true,
-          dim_inactive = false,
-          module_default = true,
-          styles = {
-            comments = "NONE", -- Value is any valid attr-list value `:help attr-list`
-            conditionals = "NONE",
-            constants = "NONE",
-            functions = "NONE",
-            keywords = "NONE",
-            numbers = "NONE",
-            operators = "NONE",
-            strings = "NONE",
-            types = "NONE",
-            variables = "NONE",
-          },
-          inverse = { -- Inverse highlight for different types
-            match_paren = false,
-            visual = false,
-            search = false,
-          },
-          modules = { -- List of various plugins and additional options
-            -- ...
-          },
-        },
-        palettes = {},
-        specs = {},
-        groups = {},
-      }
-    end,
-  },
-
-  { "bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000 },
-
-  { "navarasu/onedark.nvim" },
-
-  { "rebelot/kanagawa.nvim" },
-
-  { "AlphaTechnolog/pywal.nvim", name = "pywal" },
-
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function()
-      require("rose-pine").setup {
-        variant = "auto", -- auto, main, moon, or dawn
-        dark_variant = "main", -- main, moon, or dawn
-        dim_inactive_windows = false,
-        extend_background_behind_borders = true,
-
-        enable = {
-          terminal = true,
-          legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-          migrations = true, -- Handle deprecated options automatically
-        },
-
-        styles = {
-          bold = true,
-          italic = true,
-          transparency = true,
-        },
-
-        groups = {
-          border = "muted",
-          link = "iris",
-          panel = "surface",
-
-          error = "love",
-          hint = "iris",
-          info = "foam",
-          note = "pine",
-          todo = "rose",
-          warn = "gold",
-
-          git_add = "foam",
-          git_change = "rose",
-          git_delete = "love",
-          git_dirty = "rose",
-          git_ignore = "muted",
-          git_merge = "iris",
-          git_rename = "pine",
-          git_stage = "iris",
-          git_text = "rose",
-          git_untracked = "subtle",
-
-          h1 = "iris",
-          h2 = "foam",
-          h3 = "rose",
-          h4 = "gold",
-          h5 = "pine",
-          h6 = "foam",
-        },
-
-        highlight_groups = {
-          -- Comment = { fg = "foam" },
-          -- VertSplit = { fg = "muted", bg = "muted" },
-        },
-
-        before_highlight = function(group, highlight, palette)
-          -- Disable all undercurls
-          -- if highlight.undercurl then
-          --     highlight.undercurl = false
-          -- end
-          --
-          -- Change palette colour
-          -- if highlight.fg == palette.pine then
-          --     highlight.fg = palette.foam
-          -- end
-        end,
-      }
-    end,
-  },
-
-  { "ellisonleao/gruvbox.nvim" },
-
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      style = "moon",
-      transparent = true,
-      terminal_colors = true,
-      styles = {
-
-        comments = { italic = true },
-        keywords = { italic = true },
-        functions = {},
-        variables = {},
-        sidebars = "transparent",
-        floats = "transparent",
-      },
-      sidebars = { "qf", "help" },
-      hide_inactive_statusline = false,
-      lualine_bold = true,
-
-      on_colors = function(colors)
-        -- colors.hint = colors.orange
-        colors.comment = "#303C63"
-      end,
-
-      on_highlights = function(hl, c)
-        local prompt = "#303C63"
-        hl.LineNr = { fg = prompt }
-        hl.IblIndent = { fg = prompt }
-        hl.MiniIndentscopeSymbol = { fg = "#6188FF" }
-        hl.TelescopeNormal = {
-          bg = c.bg_dark,
-          fg = c.fg_dark,
-        }
-        hl.TelescopeBorder = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopePromptNormal = {
-          bg = prompt,
-        }
-        hl.TelescopePromptBorder = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePromptTitle = {
-          bg = prompt,
-          fg = prompt,
-        }
-        hl.TelescopePreviewTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-        hl.TelescopeResultsTitle = {
-          bg = c.bg_dark,
-          fg = c.bg_dark,
-        }
-      end,
     },
   },
 }
