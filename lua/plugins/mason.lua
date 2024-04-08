@@ -18,6 +18,8 @@ return {
         "shellcheck",
         "shfmt",
         "stylua",
+        "selene",
+        "luacheck",
         "tailwindcss-language-server",
         "typescript-language-server",
         "vim-language-server",

@@ -106,6 +106,7 @@ return {
         highlight_overrides = {
           all = function(colors)
             return {
+              MiniIndentscopeSymbol = { fg = colors.sapphire },
               CmpItemMenu = { fg = colors.surface2 },
               CursorLineNr = { fg = colors.subtext0 },
               FloatBorder = { bg = colors.base, fg = colors.overlay0 }, -- colors.surface0 }, difficult to see
